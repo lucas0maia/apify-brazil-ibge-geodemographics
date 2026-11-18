@@ -1,0 +1,35 @@
+{
+  "actorSpecification": 1,
+  "views": {
+    "overview": {
+      "title": "Brazil IBGE Geodemographics & Territory Records",
+      "transformation": {
+        "fields": [
+          "recordType",
+          "ibgeId",
+          "name",
+          "uf",
+          "regionOrParent",
+          "period",
+          "numericValue",
+          "unit",
+          "sourceUrl"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "recordType": { "label": "Mode", "format": "text" },
+          "ibgeId": { "label": "IBGE / CNAE Code", "format": "text" },
+          "name": { "label": "Name / Description", "format": "text" },
+          "uf": { "label": "UF", "format": "text" },
+          "regionOrParent": { "label": "Region / Division", "format": "text" },
+          "period": { "label": "Reference Year", "format": "text" },
+          "numericValue": { "label": "Value", "format": "number" },
+          "unit": { "label": "Unit", "format": "text" },
+          "sourceUrl": { "label": "Official IBGE Source", "format": "link" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "actorSpecification": 1,
+  "name": "apify-brazil-ibge-geodemographics",
+  "title": "Brazil IBGE Geodemographics, Municipal GDP, CNAE & GeoJSON",
+  "description": "Extract official Brazilian IBGE municipalities (7-digit codes), estimated population, municipal GDP (PIB), CNAE 2.3 industry classifications, and GeoJSON territorial meshes via REST API with MCP support.",
+  "version": "0.0",
+  "buildTag": "latest",
+  "meta": {
+    "templateId": "python-start",
+    "generatedBy": "Antigravity"
+  },
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "defaultMemoryMbytes": 512,
+  "usesStandbyMode": true,
+  "webServerMcpPath": "/mcp"
+}

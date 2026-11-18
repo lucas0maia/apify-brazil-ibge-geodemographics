@@ -1,0 +1,73 @@
+{
+  "title": "Brazil IBGE Geodemographics, GDP, CNAE & GeoJSON Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Dataset Mode",
+      "type": "string",
+      "description": "Select municipalities catalog, estimated population, municipal GDP (PIB), CNAE 2.3 classes, or official GeoJSON boundary mesh.",
+      "enum": [
+        "municipalities",
+        "population",
+        "municipal_gdp",
+        "cnae_classes",
+        "geojson_mesh"
+      ],
+      "default": "municipalities",
+      "prefill": "municipalities"
+    },
+    "uf": {
+      "title": "State Acronym (UF)",
+      "type": "string",
+      "description": "Optional 2-letter Brazilian state code (e.g. AL, SP, RJ, MG, BA). Resolves state boundaries and city lists automatically.",
+      "editor": "textfield",
+      "default": "AL"
+    },
+    "ibgeIds": {
+      "title": "IBGE Territory Codes (6/7 digits)",
+      "type": "array",
+      "description": "Optional list of 7-digit municipality IBGE codes (e.g. 2704302 for Maceio, 3550308 for Sao Paulo).",
+      "editor": "stringList",
+      "default": []
+    },
+    "cnaeCode": {
+      "title": "CNAE Class Code",
+      "type": "string",
+      "description": "Optional 5-digit CNAE 2.3 class code (e.g. 62015 or 47113).",
+      "editor": "textfield",
+      "default": ""
+    },
+    "query": {
+      "title": "Search Query (Municipality or Industry Keyword)",
+      "type": "string",
+      "description": "Optional case-insensitive filter across city names, CNAE descriptions, or regions.",
+      "editor": "textfield",
+      "default": ""
+    },
+    "quality": {
+      "title": "GeoJSON Mesh Resolution",
+      "type": "string",
+      "description": "Boundary geometry detail level for geojson_mesh mode.",
+      "enum": ["minima", "intermediaria", "maxima"],
+      "default": "minima"
+    },
+    "maxResults": {
+      "title": "Max Results",
+      "type": "integer",
+      "description": "Maximum number of rows returned.",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 6000
+    },
+    "timeoutSecs": {
+      "title": "Request Timeout (Seconds)",
+      "type": "integer",
+      "description": "HTTP timeout in seconds.",
+      "default": 30,
+      "minimum": 5,
+      "maximum": 60
+    }
+  },
+  "required": ["mode"]
+}

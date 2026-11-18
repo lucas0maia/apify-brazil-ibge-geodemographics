@@ -1,0 +1,11 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Brazil IBGE Geodemographics Output",
+  "properties": {
+    "dataset": {
+      "type": "string",
+      "title": "IBGE Geodemographics Dataset",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}
